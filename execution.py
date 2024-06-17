@@ -221,8 +221,8 @@ def recursive_output_delete_if_changed(prompt, old_prompt, outputs, current_item
     class_type = prompt[unique_id]['class_type']
     class_def = nodes.NODE_CLASS_MAPPINGS[class_type]
 
-    is_changed_old = ''
-    is_changed = ''
+    is_changed_old = ['']
+    is_changed = ['']
     to_delete = False
     if hasattr(class_def, 'IS_CHANGED'):
         if unique_id in old_prompt and 'is_changed' in old_prompt[unique_id]:
